@@ -10,8 +10,6 @@ class Api {
     try {
       final response = await http.post(Uri.parse(url), body: data, headers: {
         HttpHeaders.authorizationHeader: "Bearer $token",
-        // Sesuaikan header dengan API yang diberikan
-        // Contoh: "Content-Type": "application/json"
       });
       responseJson = _returnResponse(response);
     } on SocketException {
@@ -26,7 +24,6 @@ class Api {
     try {
       final response = await http.get(Uri.parse(url), headers: {
         HttpHeaders.authorizationHeader: "Bearer $token",
-        // Sesuaikan header dengan API yang diberikan
       });
       responseJson = _returnResponse(response);
     } on SocketException {
@@ -41,7 +38,6 @@ class Api {
     try {
       final response = await http.post(Uri.parse(url), headers: {
         HttpHeaders.authorizationHeader: "Bearer $token",
-        // Sesuaikan header dengan API yang diberikan
       });
       responseJson = _returnResponse(response);
     } on SocketException {

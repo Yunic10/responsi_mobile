@@ -42,11 +42,10 @@ class TugasBloc {
     var response = await Api().post(apiUrl, body);
     var jsonObj = json.decode(response.body);
 
-    // Periksa status respons dan kembalikan hasil yang sesuai
     if (jsonObj['status'] == 'success') {
-      return true; // Berhasil mengubah tugas
+      return true;
     } else {
-      return false; // Gagal mengubah tugas
+      return false;
     }
   }
 

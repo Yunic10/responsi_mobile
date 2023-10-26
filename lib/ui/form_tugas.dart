@@ -59,7 +59,7 @@ class _TugasFormState extends State<TugasForm> {
                 _deadlineTextField(),
                 _buttonSubmit(),
                 if (widget.tugas != null)
-                  _buttonDelete(), // Tambah tombol hapus jika sedang mengubah tugas
+                  _buttonDelete(),
               ],
             ),
           ),
